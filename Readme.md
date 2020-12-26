@@ -1,4 +1,4 @@
-# Bookshelf
+## Bookshelf
 
 This is the result of an exercise to explore computer-vision and python.
 There are several tutorials about reading and decoding barcode using OpenCV
@@ -10,16 +10,16 @@ manually, search the database, delete entries and export data to a csv-file.
 
 The following modules are imported into the main program:
 
-#scan_barcodes.py is a module that captures video from the webcam, decodes
+# scan_barcodes.py is a module that captures video from the webcam, decodes
 barcodes/QR codes and writes them to barcodes.csv. It relies on open-cv,
 pyzbar/zbar modules.
 
-#get_isbn_meta.py is a module to look up ISBN Codes using Google Api,
+# get_isbn_meta.py is a module to look up ISBN Codes using Google Api,
 it takes an ISBN number as argument, that has to be a string!
 
-#db_handler.py is a class to interact with the Sqlite3 database.
+# db_handler.py is a class to interact with the Sqlite3 database.
 
-#bookshelf.py is the main library program
+# bookshelf.py is the main library program
 It imports scan_barcodes.py, get_isbn_code.py and db_handler.py.
 
 Programm functions:
