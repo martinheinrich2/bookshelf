@@ -271,7 +271,7 @@ listbox.bind('<<ListboxSelect>>', get_selected_row)
 
 
 # Create buttons
-btn1 = tk.Button(root, text="Scan barcodes", width=20, command=clickedBscanner)
+btn1 = tk.Button(root, text="Scan barcode", width=20, command=clickedBscanner)
 btn1.grid(column=0, row=1)
 btn2 = tk.Button(root, text="Get book data from Google", width=20, command=clickedGetBookdata)
 btn2.grid(column=0, row=2)

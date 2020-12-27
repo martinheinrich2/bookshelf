@@ -8,33 +8,33 @@ The program can read a barcode from a book, get information about the book
 from Google Books, store the information in a Sqlite3 database, add books
 manually, search the database, delete entries and export data to a csv-file.
 
-The following modules are imported into the main program:
+**bookshelf.py** is the main library program. It imports scan_barcodes.py,
+get_isbn_code.py and db_handler.py.
 
 - scan_barcodes.py is a module that captures video from the webcam, decodes
-barcodes/QR codes and writes them to barcodes.csv. It relies on open-cv,
-pyzbar/zbar modules.
+  barcodes/QR codes and writes them to barcodes.csv (it adds a timestamp to the
+  name). It it uses the open-cv, pyzbar/zbar modules.
 
 - get_isbn_meta.py is a module to look up ISBN Codes using Google Api,
-it takes an ISBN number as argument, that has to be a string!
+  it takes an ISBN number as argument, that has to be a string!
 
 - db_handler.py is a class to interact with the Sqlite3 database.
 
-And bookshelf.py is the main library program. It imports scan_barcodes.py, get_isbn_code.py and db_handler.py.
+Program functions:
 
-Programm functions:
-
-1. Scan Barcodes: Uses open-cv and pyzbar to scan barcodes from webcam frames.
-   It writes barcodes to a csv file with name barcodes + timestamp.
+1. Scan Barcode: Uses open-cv and pyzbar to scan a single or a batch of barcodes
+   from webcam frames. It writes barcodes to a csv file with name barcodes +
+   timestamp.
 
 2. Get Book data from Google: Opens a filedialog to read a barcodes-xxxx.csv
-   file. Then it uses the Google api at:
-   https://www.googleapis.com/books/v1/volumes?q=isbn:
+   file. Then it uses the [Google api] (https://www.googleapis.com/books/v1/volumes?q=isbn:)
    and gets book metadata from Google Books. It writes the book data to a file:
    "book_data.csv".
 
 3. View Books: Load book_library.db and display information about books.
 
-4. Search Title/Author: Works partially, needs some improvement!
+4. Search Title/Author: Works for the full title, needs some improvement to find
+   a book from keywords.
 
 5. Add Book: Add book to database, except for a description!
 
@@ -58,5 +58,4 @@ Programm functions:
 
 - Find a way to make it a standalone application. The pyinstaller package does not support zbar.
 
-- fix that leading zeros are cut from ISBN
-
+- fix leading zeros are cut from ISBN
