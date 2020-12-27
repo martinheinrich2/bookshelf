@@ -27,7 +27,7 @@ Program functions:
    timestamp.
 
 2. Get Book data from Google: Opens a filedialog to read a barcodes-xxxx.csv
-   file. Then it uses the [Google api] (https://www.googleapis.com/books/v1/volumes?q=isbn:)
+   file. Then it uses the [Google api](https://www.googleapis.com/books/v1/volumes?q=isbn:)
    and gets book metadata from Google Books. It writes the book data to a file:
    "book_data.csv".
 
