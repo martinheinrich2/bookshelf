@@ -59,3 +59,5 @@ Program functions:
 - Find a way to make it a standalone application. The pyinstaller package does not support zbar.
 
 - fix leading zeros are cut from ISBN
+
+![Screenshot](https://github.com/martinheinrich2/bookshelf/blob/main/screenshot.png)
