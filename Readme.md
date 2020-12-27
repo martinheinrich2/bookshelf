@@ -60,4 +60,6 @@ Program functions:
 
 - fix leading zeros are cut from ISBN
 
+## Screenshot
+
 ![Screenshot](https://github.com/martinheinrich2/bookshelf/blob/main/screenshot.png)
